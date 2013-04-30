@@ -1,0 +1,45 @@
+@CHARSET "UTF-8";
+
+#main_box { 
+	position: absolute;
+  	border: 2px solid gray;
+  	width: 800px;
+  	height: 500px;
+  	top: 50%;
+  	left: 50%;
+  	margin-left: -400px;
+  	margin-top: -250px;
+}
+
+#left_box_top {
+	position: absolute;
+	border: 2px solid gray;
+	width: 293px;
+	height: 240px;
+	top: 50%;
+	left: 50%;
+	margin-left: -395px;
+	margin-top: -245px;
+}
+
+#left_box_bottom {
+	position: absolute;
+	border: 2px solid gray;
+	width: 293px;
+	height: 245px;
+	top: 50%;
+	left: 50%;
+	margin-left: -395px;
+	margin-top: 0px;
+}
+
+#right_box {
+	position: absolute;
+	border: 2px solid gray;
+	width: 490px;
+	height: 490px;
+	top: 50%;
+	left: 50%;
+	margin-left: -95px;
+	margin-top: -245px;
+}

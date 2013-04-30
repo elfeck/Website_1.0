@@ -1,15 +1,5 @@
 @CHARSET "UTF-8";
 
-@font-face {
-	font-family: LinBio;
-	src: url("../res/LinBiolinum_R.woff");
-}
-
-@font-face {
-	font-family: LinLib;
-	src: url("../res/LinLibertine_R.woff");
-}
-
 h1 {
 	position: absolute;
 	color: #c68328;
@@ -35,6 +25,7 @@ h1 {
 	
 	background-image: url("../res/logo_70.png");
 }
+
 
 .main_box { 
 	position: absolute;
@@ -67,22 +58,4 @@ h1 {
 	height: 500px;
 	margin-left: -111px;
 	margin-top: -252px;
-}
-
-#left_upper {
-	border: 0px;
-	background-color: rgba(255,255,255,0.6);
-	width: 260px;
-	height: 200px;
-	margin-left: -390px;
-	margin-top: -240px;
-}
-
-#left_lower {
-	border: 0px;
-	background-color: rgba(255,255,255,0.6);
-	width: 260px;
-	height: 200px;
-	margin-left: -390px;
-	margin-top: -230;
 }

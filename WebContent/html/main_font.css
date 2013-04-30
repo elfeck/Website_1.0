@@ -1,0 +1,17 @@
+@CHARSET "UTF-8";
+
+
+@font-face {
+	font-family: LinLib;
+	src: url("../res/LinLibertine_R.woff");
+}
+
+@font-face {
+	font-family: LinLibB;
+	src: url("../res/LinLibertine_RB.woff");
+}
+
+@font-face {
+	font-family: LinBio;
+	src: url("../res/LinBiolinum_R.woff");
+}

@@ -1,0 +1,32 @@
+@CHARSET "UTF-8";
+
+#main_left_upper {
+	background-color: rgba(255,255,255,0.7);
+	width: 260px;
+	height: 200px;
+	margin: 10px;
+}
+
+#main_left_lower {
+	background-color: rgba(255,255,255,0.7);
+	width: 260px;
+	height: 200px;
+	margin: 10px;
+}
+
+
+#main_left_upper_heading {
+	padding: 5px;
+	padding-bottom: 0px;
+	color: #84221e;
+	font-family: LinLibB;
+	font-size: 22px;
+}
+
+#main_left_upper_text {
+	padding-left: 15px;
+	padding-right: 5px;
+	text-align: left;
+	font-family: LinBio;
+	font-size: 15px;
+}

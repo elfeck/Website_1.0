@@ -1,21 +1,62 @@
 @CHARSET "UTF-8";
 
-#main_left_upper {
-	background-color: rgba(255,255,255,0.7);
-	width: 260px;
-	height: 200px;
-	margin: 10px;
+#main_left_1 {
+	background-color: rgba(255,255,255,0);
+	width: 161px;
+	height: 0px;
+	margin-top: 10px;
+	margin-left: 10px;
 }
 
-#main_left_lower {
-	background-color: rgba(255,255,255,0.7);
-	width: 260px;
+#main_left_2 {
+	width: 161px;
 	height: 200px;
-	margin: 10px;
+	margin-top: -16px;
+	margin-left: 10px;
 }
 
+#main_left_3 {	
+	background-color: rgba(255,255,255,0);
+	width: 161px;
+	height: 0px;
+	margin-top: 15px;
+	margin-left: 10px;
+}
 
-#main_left_upper_heading {
+#main_left_footer {	
+	width: inherit;
+	height: 20px;
+	margin-top: 502px;
+	font-family: LinBio;
+	font-size: 13px;
+	color: #7e7e7e;
+	text-align: center;
+}
+
+#footer_elfeck:link {
+	text-decoration: none;	
+	color: #c68328;
+}
+
+#footer_elfeck:visited {
+	text-decoration: none;	
+	color: #c68328;
+}
+
+#footer_copy {
+	font-size: 13px;
+	color: #c68328;
+}
+
+a.footer_link:link {
+	color: #7e7e7e;
+}
+
+a.footer_link:visited {
+	color: #7e7e7e;
+}
+
+.main_left_heading {
 	padding: 5px;
 	padding-bottom: 0px;
 	color: #84221e;
@@ -23,10 +64,64 @@
 	font-size: 22px;
 }
 
-#main_left_upper_text {
+.main_left_text {
 	padding-left: 15px;
 	padding-right: 5px;
 	text-align: left;
 	font-family: LinBio;
 	font-size: 15px;
+}
+
+#navi {
+	line-height: 30px;
+	padding: 0px;
+}
+
+li.navi_ele {
+	list-style-type: none;
+	padding-bottom: 5px;
+	width: inherit;
+	height: 30px;
+}
+
+.navi_img_active {	
+	width: 30px;
+	background-position: center;
+	background-repeat: no-repeat;
+	height: inherit;
+	float: left;
+	background-image: url("../res/list_active.png");
+}
+
+.navi_img_inactive {
+	width: 30px;
+	background-position: center;
+	background-repeat: no-repeat;
+	height: inherit;
+	float: left;
+	background-image: url("../res/list_inactive.png");
+}
+
+a.navi_link_inactive:link, a.navi_link_inactive:visited {
+	width: 161px;
+	height: inherit;
+	float: left;
+	text-align: left;
+	background-color: rgba(255,255,255,0.7);
+	font-family: LinBio;
+	font-size: 22px;
+	text-decoration: none;
+	color: #84221e;
+}
+
+a.navi_link_active:link, a.navi_link_active:visited {
+	width: 161px;
+	height: inherit;
+	float: left;
+	text-align: left;
+	background-color: rgba(255,255,255,0.7);
+	font-family: LinBio;
+	font-size: 22px;
+	text-decoration: none;
+	color: #c68328;
 }

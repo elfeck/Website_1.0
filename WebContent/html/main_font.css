@@ -12,6 +12,21 @@
 }
 
 @font-face {
+	font-family: LinLibI;
+	src: url("../res/LinLibertine_RI.woff");
+}
+
+@font-face {
 	font-family: LinBio;
 	src: url("../res/LinBiolinum_R.woff");
+}
+
+@font-face {
+	font-family: LinBioI;
+	src: url("../res/LinBiolinum_RI.woff");
+}
+
+@font-face {
+	font-family: LinBioB;
+	src: url("../res/LinBiolinum_RB.woff");
 }

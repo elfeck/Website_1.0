@@ -1,36 +1,54 @@
+var listElements = new Array(6);
+
 $(document).ready(function() {
-	$("#nl_1").click(function(event) {
-		activate(document.getElementById("nl_1"), document.getElementById("ni_1"));
-	});
-	$("#nl_2").click(function(event) {
-		activate(document.getElementById("nl_2"), document.getElementById("ni_2"));
-	});
-	$("#nl_3").click(function(event) {
-		activate(document.getElementById("nl_3"), document.getElementById("ni_3"));
-	});
-	$("#nl_4").click(function(event) {
-		activate(document.getElementById("nl_4"), document.getElementById("ni_4"));
-	});
-	$("#nl_5").click(function(event) {
-		activate(document.getElementById("nl_5"), document.getElementById("ni_5"));
-	});
-	$("#nl_6").click(function(event) {
-		activate(document.getElementById("nl_6"), document.getElementById("ni_6"));
-	});
+	for(var i = 0; i < listElements.length; i++) {
+		listElements[i] = new ListElement(i + 1);
+		register(listElements[i]);
+	}
+	listElements[0].activated = true;
 });
 
-var activate = function(navi_link, navi_img) {
-	$(navi_link).removeClass("navi_link_inactive");
-	$(navi_link).addClass("navi_link_active");
-	
-	$(navi_img).removeClass("navi_img_inactive");
-	$(navi_img).addClass("navi_img_active");
+function register(listElement) {
+	$(listElement.getLinkElementString()).on("click", function(event) {
+		listElement.activate();
+	});
+	$(listElement.getLinkElementString()).on("mouseenter", function(event) {
+		//TODO
+	});
+	$(listElement.getLinkElementString()).on("mouseleave", function(event) {
+		//TODO
+	});
 };
 
-var deactive = function(navi_link, navi_img) {
-	$(navi_link).removeClass("navi_link_active");
-	$(navi_link).addClass("navi_link_inactive");
-	
-	$(navi_img).removeClass("navi_img_active");
-	$(navi_img).addClass("navi_img_inactive");
+function ListElement(index) {
+	this.index = index;
+	this.activated = false;
+		
+	this.getLinkElementString = function getLinkElementString() {
+		return "#nl_" + this.index;
+	};
+	this.getImgElementString = function getImgElementString() {
+		return "#ni_" + this.index;
+	};
+	this.getLinkElement = function getLinkElement() {
+		return document.getElementById(this.getLinkElementString());
+	};
+	this.getImgElement = function getImgElement() {			
+		return document.getElementById(this.getImgElementString());
+	};
+	this.activate = function activate() {
+		for(var i = 0; i < listElements.length; i++) {
+			if(listElements[i].activated) {
+				listElements[i].activated = false;
+				listElements[i].deactivate();
+			}
+		}
+		$(this.getLinkElementString()).attr("class", "navi_link_active");
+		$(this.getImgElementString()).attr("class", "navi_img_active");
+		this.activated = true;
+	};
+	this.deactivate = function deactivate() {
+		$(this.getLinkElementString()).attr("class", "navi_link_inactive");
+		$(this.getImgElementString()).attr("class", "navi_img_inactive");
+	};
 };

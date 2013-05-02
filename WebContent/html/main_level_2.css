@@ -16,10 +16,10 @@
 }
 
 #main_left_3 {	
-	background-color: rgba(255,255,255,0);
+	background-color: rgba(255,255,255,0.7);
 	width: 161px;
-	height: 0px;
-	margin-top: 15px;
+	height: 201px;
+	margin-top: 78px;
 	margin-left: 10px;
 }
 
@@ -107,7 +107,6 @@ a.navi_link_inactive:link, a.navi_link_inactive:visited {
 	height: inherit;
 	float: left;
 	text-align: left;
-	background-color: rgba(255,255,255,0.7);
 	font-family: LinBio;
 	font-size: 22px;
 	text-decoration: none;
@@ -119,9 +118,21 @@ a.navi_link_active:link, a.navi_link_active:visited {
 	height: inherit;
 	float: left;
 	text-align: left;
-	background-color: rgba(255,255,255,0.7);
 	font-family: LinBio;
 	font-size: 22px;
 	text-decoration: none;
 	color: #c68328;
+}
+
+.navi_link_light {
+	background-color: rgba(255,255,255,0.7);
+}
+
+.navi_link_dark {
+	background-color: rgba(255,255,255,0.9);
+}
+
+#li_padding {
+	width: inherit;
+	height: 4px;
 }

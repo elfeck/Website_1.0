@@ -1,7 +1,7 @@
 var listElements = new Array(7);
 
 $(document).ready(function() {
-	for(var i = 0; i < listElements.length; i++) {
+	for ( var i = 0; i < listElements.length; i++) {
 		listElements[i] = new ListElement(i + 1);
 		register(listElements[i]);
 	}
@@ -13,17 +13,17 @@ function register(listElement) {
 		listElement.activate();
 	});
 	$(listElement.getLinkElementString()).on("mouseenter", function(event) {
-		listElement.lightOff();
+		listElement.highlightOn();
 	});
 	$(listElement.getLinkElementString()).on("mouseleave", function(event) {
-		listElement.lightOn();
+		listElement.highlightOff();
 	});
 };
 
 function ListElement(index) {
 	this.index = index;
 	this.activated = false;
-		
+
 	this.getLinkElementString = function getLinkElementString() {
 		return "#nl_" + this.index;
 	};
@@ -33,34 +33,49 @@ function ListElement(index) {
 	this.getLinkElement = function getLinkElement() {
 		return document.getElementById(this.getLinkElementString());
 	};
-	this.getImgElement = function getImgElement() {			
+	this.getImgElement = function getImgElement() {
 		return document.getElementById(this.getImgElementString());
 	};
 	this.activate = function activate() {
-		for(var i = 0; i < listElements.length; i++) {
-			if(listElements[i].activated) {
-				listElements[i].activated = false;
-				listElements[i].deactivate();
+		if (!this.activated) {
+			for ( var i = 0; i < listElements.length; i++) {
+				if (listElements[i].activated) {
+					listElements[i].deactivate();
+				}
 			}
+			$(this.getLinkElementString()).removeClass("navi_link_inactive");
+			$(this.getImgElementString()).removeClass("navi_img_inactive");
+			$(this.getLinkElementString()).addClass("navi_link_active");
+			$(this.getImgElementString()).addClass("navi_img_active");
+			activateContent(this.index);
+			this.activated = true;
 		}
-		$(this.getLinkElementString()).removeClass("navi_link_inactive");
-		$(this.getImgElementString()).removeClass("navi_img_inactive");
-		$(this.getLinkElementString()).addClass("navi_link_active");
-		$(this.getImgElementString()).addClass("navi_img_active");
-		this.activated = true;
 	};
 	this.deactivate = function deactivate() {
 		$(this.getLinkElementString()).removeClass("navi_link_active");
 		$(this.getImgElementString()).removeClass("navi_img_active");
 		$(this.getLinkElementString()).addClass("navi_link_inactive");
 		$(this.getImgElementString()).addClass("navi_img_inactive");
+		deactivateContent(this.index);
+		this.activated = false;
+		this.highlightOff();
 	};
-	this.lightOn = function lightOn() {
-		$(this.getLinkElementString()).removeClass("navi_link_dark");
-		$(this.getLinkElementString()).addClass("navi_link_light");
+	this.highlightOn = function highlightOn() {
+		$(this.getLinkElementString()).removeClass("navi_highlightOff");
+		$(this.getLinkElementString()).addClass("navi_highlightOn");
 	};
-	this.lightOff = function lightOff() {
-		$(this.getLinkElementString()).removeClass("navi_link_light");
-		$(this.getLinkElementString()).addClass("navi_link_dark");
+	this.highlightOff = function highlightOff() {
+		if (!this.activated) {
+			$(this.getLinkElementString()).removeClass("navi_highlightOn");
+			$(this.getLinkElementString()).addClass("navi_highlightOff");
+		}
 	};
+};
+
+function activateContent(index) {
+	console.log(index);
+};
+
+function deactivateContent(index) {
+	console.log(index);
 };

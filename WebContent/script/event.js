@@ -5,8 +5,12 @@ $(document).ready(function() {
 		listElements[i] = new ListElement(i + 1);
 		register(listElements[i]);
 	}
-	listElements[0].activated = true;
+	init();
 });
+
+function init() {
+	listElements[0].activate();
+}
 
 function register(listElement) {
 	$(listElement.getLinkElementString()).on("click", function(event) {
@@ -70,12 +74,4 @@ function ListElement(index) {
 			$(this.getLinkElementString()).addClass("navi_highlightOff");
 		}
 	};
-};
-
-function activateContent(index) {
-	console.log(index);
-};
-
-function deactivateContent(index) {
-	console.log(index);
 };

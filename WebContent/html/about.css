@@ -1,0 +1,15 @@
+@CHARSET "UTF-8";
+
+#main_right_lower {
+	background-color: rgba(255,255,255,0.6);
+	width: 480px;
+	height: 200px;
+	margin: 10px;
+}
+
+#main_right_upper {
+	background-color: rgba(255,255,255,0.6);
+	width: 480px;
+	height: 200px;
+	margin: 10px;
+}

@@ -44,3 +44,10 @@
 	text-align: left;
 	padding: 3px;
 }
+
+.ephemeral_hsmall {
+	margin-left: 30px;
+	font-size: 12px;
+	font-family: LinBio;
+	color: #000000;
+}

@@ -103,6 +103,7 @@ a.navi_link_inactive:link, a.navi_link_inactive:visited {
 	font-size: 22px;
 	text-decoration: none;
 	color: #84221e;
+	background-color: rgba(255,255,255,0.6);
 }
 
 a.navi_link_active:link, a.navi_link_active:visited {
@@ -114,14 +115,17 @@ a.navi_link_active:link, a.navi_link_active:visited {
 	font-size: 22px;
 	text-decoration: none;
 	color: #c68328;
-}
-
-.navi_highlightOn {
 	background-color: rgba(255,255,255,0.9);
 }
 
+a.navi_link_inactive:hover {
+	background-color: rgba(255,255,255,0.9);
+}
+
+.navi_highlightOn {
+}
+
 .navi_highlightOff {
-	background-color: rgba(255,255,255,0.6);
 }
 
 #li_padding {

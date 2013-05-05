@@ -1,0 +1,46 @@
+@CHARSET "UTF-8";
+
+.ephemeral_box_1 {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.ephemeral_box_2 {
+	margin: 10px;
+	margin-top: 0px;
+	margin-bottom: 3px;
+}
+
+.ephemeral_wrap {
+	overflow: auto;
+}
+
+.ephemeral_box_3 {
+	float: left;
+	width: 227px;
+	height: 120px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	margin-left: 10px;
+	margin-right: 0px;
+}
+
+.ephemeral_box_4 {
+	float: left;
+	width: 227px;
+	height: 120px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	margin-left: 3px;
+	margin-right: 10px;
+}
+
+.ephemeral_ul {
+	margin: 0px;
+	margin-left: -15px;
+}
+
+.ephemeral_li {
+	text-align: left;
+	padding: 3px;
+}

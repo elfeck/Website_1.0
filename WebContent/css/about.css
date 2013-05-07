@@ -1,15 +1,19 @@
 @CHARSET "UTF-8";
 
-#about_upper {
-	background-color: rgba(255,255,255,0.6);
-	width: 469px;
-	margin: 10px;
-	padding: 10px;
+
+.about_box_1 {
+	margin-top: 10px;
+	margin-bottom: 10px;
 }
 
-#about_lower {
-	background-color: rgba(255,255,255,0.6);
-	width: 469px;
+.about_box_2 {
 	margin: 10px;
-	padding: 10px;
+	margin-bottom: 3px;
+}
+
+.about_box_3 {
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-top: 0px;
+	margin-bottom: 3px;
 }
